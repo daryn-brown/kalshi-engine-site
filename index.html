@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalshi Strategy Engine</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#4F46E5", // Indigo
+              secondary: "#10B981", // Emerald
+              neutral: {
+                100: "#F3F4F6", // Gray 100
+                200: "#E5E7EB", // Gray 200
+                700: "#374151", // Gray 700
+                800: "#1F2937", // Gray 800
+                900: "#111827", // Gray 900
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Basic fallback styles if Tailwind doesn't load or for non-Tailwind elements */
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6; /* neutral-100 */
+        color: #1f2937; /* neutral-800 */
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #4f46e5; /* primary */
+      }
+    </style>
+  </head>
+  <body class="bg-neutral-100 text-neutral-800 antialiased">
+    <header class="bg-neutral-900 text-white py-12 shadow-lg">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">
+          Kalshi Strategy Engine
+        </h1>
+        <p class="text-lg md:text-xl text-neutral-300">
+          Developing automated trading solutions for Kalshi event markets.
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-[-40px] p-6 md:p-8 z-10 relative">
+      <section id="about" class="bg-white p-6 md:p-8 rounded-lg shadow-xl mb-8">
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-primary mb-4 border-b-2 border-neutral-200 pb-2"
+        >
+          About The Project
+        </h2>
+        <p class="text-neutral-700 mb-4 text-base md:text-lg">
+          The
+          <strong class="font-semibold text-primary"
+            >Kalshi Strategy Engine</strong
+          >
+          is a Python-based project focused on building a robust framework for
+          creating, backtesting (where feasible), and deploying automated
+          trading strategies on
+          <a
+            href="https://kalshi.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-secondary hover:underline font-medium"
+            >Kalshi's unique event contract markets</a
+          >.
+        </p>
+        <p class="text-neutral-700 mb-4 text-base md:text-lg">
+          Our goal is to explore quantitative approaches to event-based trading,
+          leveraging data analysis and algorithmic decision-making. This project
+          is currently under active development.
+        </p>
+        <div class="mt-6 text-center md:text-left">
+          <a
+            href="https://github.com/your-github-username/kalshi-strategy-engine"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-primary text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            View Code Repository (Main Project)
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="features"
+        class="bg-white p-6 md:p-8 rounded-lg shadow-xl mb-8"
+      >
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-primary mb-4 border-b-2 border-neutral-200 pb-2"
+        >
+          Current Focus & Future Vision
+        </h2>
+        <ul
+          class="list-disc list-inside text-neutral-700 space-y-2 text-base md:text-lg"
+        >
+          <li>
+            Developing secure and reliable integration with the Kalshi API.
+          </li>
+          <li>Exploring various data sources for predictive signals.</li>
+          <li>Building a modular engine for strategy implementation.</li>
+          <li>Implementing basic risk management protocols.</li>
+          <li>
+            Future: Potential for offering insights, tools, or licensed software
+            based on this engine.
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="bg-white p-6 md:p-8 rounded-lg shadow-xl">
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-primary mb-4 border-b-2 border-neutral-200 pb-2"
+        >
+          Stay Updated
+        </h2>
+        <p class="text-neutral-700 text-base md:text-lg">
+          This project is currently in its early stages. For updates, please
+          monitor the main code repository.
+        </p>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 mt-8 text-neutral-700">
+      <p>
+        &copy; <span id="currentYear"></span> Kalshi Strategy Engine Project.
+        All rights reserved (for now!).
+      </p>
+      <p class="text-sm">
+        This is a development project and not financial advice.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
